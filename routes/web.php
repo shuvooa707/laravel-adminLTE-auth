@@ -27,11 +27,11 @@ Route::get("/home", function(){
 return view("home");
 });
 
-// Route::group(["middleware" => "auth"])->group(function(){
-//     Route::get("/dashboard", function(){
-//         return view("dashboard");
-//     });
-// });
+Route::group(["middleware" => "auth"], function(){
+    Route::get("/dashboard", function(){
+        return view("dashboard");
+    });
+});
 
 
 //
